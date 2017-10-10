@@ -1,0 +1,84 @@
+footer {
+    background-color: transparent;
+    box-shadow: -1px -1px 1px #d7d7d7;
+    padding-top: 20px;
+}
+footer .divider {
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    overflow: visible;
+    margin: 30px 0;
+    }
+footer .divider:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 30px;
+    background-size: 21px 20px;
+    background-image: url(https://static.opentok.com/img/icons/footer-div_logo@2x.png);
+    background-position: center;
+    background-color: #181818;
+    background-repeat: no-repeat;
+    left: 50%;
+    margin-left: -25px;
+    top: -15px;
+}
+.ft-row {
+    margin-bottom: 15px;
+}
+footer .list-item-ft {
+    width: 25%;
+    float: left;
+    padding-right: 15px;
+}
+footer .list-item-ft .title-ft {
+     position: relative;
+ }
+footer .list-item-ft h3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 20px;
+}
+footer .list-item-ft h3:after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #d7d7d7;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+footer .list-item-ft ul.list-link li {
+    padding: 3px 0;
+    color: #fff;
+}
+footer .list-item-ft ul li a {
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+.footer-bottom {
+    border-top: 1px solid #5f5c5c;
+    padding-top: 10px;
+}
+footer .footer-bottom p {
+    width: 100%;
+    color: #d7d7d7;
+}
+
+
+
+
+
+
