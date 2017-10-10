@@ -1,0 +1,44 @@
+.main-header {
+    background-color: rgba(48,48,49,0.95);
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    z-index: 101;
+    color: #fff;
+}
+.main-header a {
+    font-size: 14px;
+    font-family: "Raleway-Regular", arial;
+    color: #fff;
+    text-decoration: none;
+    line-height: 40px;
+}
+.nav>a:hover {
+    background-color: #646b73;
+}
+.navbar-right {
+    text-align: right;
+}
+.logo span {
+    font-size: 20px;
+}
+.logo img {
+    width: 80px;
+}
+.navbar-right {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+.navs {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.navbar-right .navs li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+
+}

@@ -1,1 +1,122 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family:"ProximaNova-Regular";
+    src:url("./assets/fonts/ProximaNova-Regular.otf") format("opentype");
+}
+
+@font-face{
+    font-family:"ProximaNova-Bold";
+    src:url("./assets/fonts/ProximaNova-Bold.otf") format("opentype");
+}
+
+@font-face{
+    font-family:"ProximaNova-Semibold";
+    src:url("./assets/fonts/ProximaNova-Semibold.otf") format("opentype");
+}
+
+@font-face{
+    font-family:"ProximaNova-Light";
+    src:url("./assets/fonts/ProximaNova-Light.otf") format("opentype");
+}
+
+@font-face{
+    font-family:"Raleway-Regular";
+    src:url("./assets/fonts/Raleway-Regular.ttf") format("truetype");
+}
+@font-face{
+    font-family:"Raleway-SemiBold";
+    src:url("./assets/fonts/Raleway-SemiBold.ttf") format("truetype");
+}@font-face{
+    font-family:"Raleway-Light";
+    src:url("./assets/fonts/Raleway-Light.ttf") format("truetype");
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding: 0;
+}
+
+body{
+    font-family:"ProximaNova-Regular", arial ;
+    -webkit-font-smoothing: antialiased;
+    background-color: #3a3b3c;
+}
+ul,li{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.row {
+    padding-left:0;
+    padding-right: 0;
+}
+.page-content {
+    background-color: #ecf0f5;
+}
+.btn-blue {
+    background-color: #0099cb;
+    box-shadow: 0 0 0 1px #0099cb;
+    color: #fff;
+    border-radius: 1px;
+}
+#login form .btn {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+}
+.btn-blue:hover {
+    color: #fff;
+    background-color: #007ba3;
+    box-shadow: 0 0 0 2px #0099cb;
+}
+
+#login {
+    text-align: center;
+    color: #5F6062;
+    padding: 110px;
+    padding-bottom: 160px;
+}
+#login h1 {
+    font-family: "Raleway-Light", arial;
+    font-size: 48px;
+    line-height: 50px;
+    color: #09c;
+    font-weight: normal;
+    width: 100%;
+}
+#login .login-form {
+    width: 100%;
+    margin-top: 35px;
+}
+.login-form .form-group input ,.register-form .form-group input {
+    padding: 9px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.ctaarrow-white:after {
+    display: inline-block;
+    content: "";
+    background-image: url(https://static.opentok.com/img/index/ctaarrow_white@2x.png);
+    background-size: 9px 16px;
+    width: 9px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 15px;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -kthtml-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.ctaarrow-white:hover:after {
+    background-size: 9px 16px;
+    -webkit-transform: translate(3px, 0px);
+    -moz-transform: translate(3px, 0px);
+    transform: translate(3px, 0px);
+}
+#login .devise_links a {
+    color: #0099cb;
+    font-size: 15px;
+    text-decoration: none;
+}
