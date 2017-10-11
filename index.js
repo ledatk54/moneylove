@@ -7,6 +7,7 @@ var logger = require("morgan");
 var bodyParser = require("body-parser");
 var port = 3000;
 var api = require("./router/api");
+var user = require("./router/users");
 
 var app = express();
 
@@ -20,6 +21,7 @@ app.set('port', port);
 
 //router
 app.use('/api', api);
+app.use('/user', user);
 
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname + '/client/dist/index.html'));
