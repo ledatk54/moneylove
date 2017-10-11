@@ -30,5 +30,40 @@ module.exports.Register = function (params) {
             return null;
         }
     });
+};
 
+module.exports.ForgotPassword = function (email) {
+    var passwordResetToken = bcrypt.genSaltSync(35);
+    return models.users.findOne(
+        {
+            where : { Email : email }
+        }
+    ).then(function (user) {
+        if(!user) {
+            return false;
+        }else {
+            return models.users.update({ PasswordResetToken : passwordResetToken }, { where: { Email : user.Email }})
+                .then(function (result) {
+                    return result;
+                });
+        }
+    })
+};
+
+module.exports.UpdateInfo = function (params) {
+    var userId = params.UserId;
+      return models.users.update(
+          {
+              FullName : params.FullName,
+              Address : params.Address,
+              Phone : params.Phone,
+              Gender : params.Gender,
+              Birthday : params.Birthday,
+          },
+          {
+              where : { Id : userId}
+          }
+      ).then(function (result) {
+          return result;
+      })
 };

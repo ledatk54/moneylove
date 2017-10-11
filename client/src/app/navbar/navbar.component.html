@@ -1,8 +1,8 @@
 <header class="main-header">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-3">
-        <a class="logo" routerLink="/" routerLinkActive="active">
+        <a class="logo" routerLink="/" [routerLinkActive]="['active']">
           <img src="../../assets/images/logo.png" alt="logo">
           <span>Money Love</span>
         </a>
@@ -11,13 +11,13 @@
         <nav class="navbar-right">
           <ul class="navs">
             <li class="nav active">
-              <a class="nav-link" routerLink="/login">Login</a>
+              <a class="nav-link" routerLink="/login" [routerLinkActive]="['active']">Login</a>
             </li>
             <li class="nav">
-              <a class="nav-link" routerLink="/register">Register</a>
+              <a class="nav-link" routerLink="/register" [routerLinkActive]="['active']">Register</a>
             </li>
             <li class="nav">
-              <a class="nav-link disabled" routerLink="/logout">Logout</a>
+              <a class="nav-link disabled" routerLink="/logout" [routerLinkActive]="['active']">Logout</a>
             </li>
           </ul>
         </nav>

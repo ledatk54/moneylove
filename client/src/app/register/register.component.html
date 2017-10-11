@@ -1,38 +1,51 @@
 <div id="login" class="page-content">
   <div class="container">
-    <h1>Sign up for a free trial</h1>
+    <h1>{{ title }}</h1>
     <ul class="regflow-status step1 desktop-only">
       <li>Login info</li>
       <li>Verify Email</li>
     </ul>
-    <form class="register-form">
+    <form class="register-form" *ngIf="!submitted" [formGroup]="registerForm" (submit) = "onRegisterSubmit()">
 
       <div class="form-group">
-        <input id="registerName" type="text" name="registerName" placeholder="Full Name*" size="30" class="autofocus-first-field " value="">
+        <input formControlName="registerName" type="text" placeholder="Full Name*" size="30" class="autofocus-first-field ">
+        <div class="error-msg" *ngIf="registerForm.controls.registerName.errors?.minlength && registerForm.controls.registerName.dirty">
+            This field is requied
+        </div>
       </div>
 
       <div class="form-group">
-        <input id="registerEmail" type="text" name="registerEmail" placeholder="Email*" class="" value="" size="30" >
+        <input formControlName="registerEmail"  type="email" placeholder="Email*"  size="30" >
+        <div class="error-msg" *ngIf="registerForm.controls.registerEmail.errors.email && registerForm.controls.registerEmail.touched">
+          This field is must be a email
+        </div>
+        <div class="error-msg" *ngIf="registerForm.controls.registerEmail.errors.required && registerForm.controls.registerEmail.touched">
+          This field is must required
+        </div>
       </div>
 
       <div class="form-group">
-        <input id="registerPhone" name="registerPhone" placeholder="Phone*" type="text" class="" value="" size="30" >
+        <input formControlName="registerPhone" placeholder="Phone*" type="text"  size="30" >
       </div>
 
       <div class="form-group">
-        <input id="registerPassword" type="password" name="registerPassword*" placeholder="Password*" class="" value="" size="30" >
+        <input formControlName="registerPassword" type="password" placeholder="Password*" size="30" >
       </div>
 
       <div class="form-group">
-        <input id="registerRePassword" type="password" name="registerRePassword" placeholder="Retype Password*" class="" value="" size="30" >
+        <input formControlName="registerRePassword"  type="password" placeholder="Confirm Password*" size="30" >
       </div>
 
       <div class="form-group">
-        <button type="button" class="btn btn-blue ctaarrow-white focus_on_button">Sign up</button>
+        <button type="submit" class="btn btn-blue ctaarrow-white focus_on_button"> <!--[disabled]="!registerForm.valid"-->Sign up</button>
       </div>
       <div class="devise_links">
         Have a account?  <a routerLink="/login" class="small">Login</a>
       </div>
     </form>
+    <p>Value: {{ registerForm.value | json}}</p>
+
+    <p>Status : {{ registerForm.status}}</p>
   </div>
 </div>
+

@@ -1,5 +1,5 @@
 .main-header {
-    background-color: rgba(48,48,49,0.95);
+    background-color: rgba(34, 45, 50, 0.89);
     /*position: fixed;*/
     /*top: 0;*/
     /*left: 0;*/
@@ -41,4 +41,7 @@
     vertical-align: top;
     margin: 0;
 
+}
+.nav-link.active {
+    background-color: #4c99cc;
 }
