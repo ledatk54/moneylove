@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body style="margin:0;padding:0;background-color:#2796b6">
+<table bgcolor="#2796b6" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: Arial,Helvetica,sans-serif;font-size: 12px;color: rgb(102, 102, 102);">
+    <tbody>
+    <tr>
+        <td>
+            <table style="border-collapse:collapse" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+                <tbody>
+                <tr>
+                    <td>
+                        <table border="0" cellpadding="0" bgcolor="#125a73" cellspacing="0" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="padding:20px 0 17px 15px" width="33.33%" align="left">
+                                    <a href="<%- params.hostname%>" target="_blank">
+                                        <img class="CToWUd" src="<%- params.hostname%>images/mail/logo.png" alt="Ishipo" width="116" height="44">
+                                    </a>
+                                </td>
+                                <td style="font-size:11px;font-weight: bold;" align="right" width="33.33%">
+                                    <img style="display: inline-block;vertical-align: middle; margin-right: 5px" src="<%- params.hostname%>images/mail/phone2.png"/>
+                                    <span style="color:#e67425;text-decoration:none; display: inline-block;vertical-align: middle; padding-right: 20px;" target="_blank">Hotline: 01658820821</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background:#ffffff; border-bottom:2px solid #e67425; color:#2796b6; font-size:24px; text-transform:uppercase; font-family:Arial, Helvetica, sans-serif; padding:15px 0px 15px;font-weight: bold;" align="center">
+                        YÊU CẦU XÁC THỰC TÀI KHOẢN
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table style="padding:0 0 0 0;border:1px solid #e3e3e3;border-top:none;border-bottom:none;background: #fff" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                            <tr>
+                                <td colspan="3" align="center">
+                                    <img src="<%- params.hostname%>images/mail/shadow.png" width="100%" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                        <tr>
+                                            <td style="padding:20px 20px 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666666">
+                                                Kính chào Quý khách <b><%- user.FullName%>,</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:20px 20px 20px 20px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666666">
+                                                Chúc mừng quý khách đã trở thành thành viên của <a href="<%- params.hostname%>">Money Love</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="padding: 0 20px">
+                                    <table style="border: 1px solid #e3e3e3;" cellspacing="0" cellpadding="0" width="100%">
+                                        <tr>
+                                            <td style="padding: 20px">
+                                                <h4 style="font-size: 14px; margin: 0 0 15px;">Thông tin đăng ký</h4>
+                                                <p><i style="display: block; width: 50px; height: 1px; background: #2796b6;"></i></p>
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td style="padding: 15px;border: 1px solid #e3e3e3;" width="25%">
+                                                            <b>Email</b>
+                                                        </td>
+                                                        <td style="padding: 15px; border: 1px solid #e3e3e3;border-left: none; vertical-align: top" width="75%"><%- user.Email%></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding: 15px;border: 1px solid #e3e3e3;" width="25%">
+                                                            <b>Xác minh tài khoản</b>
+                                                        </td>
+                                                        <td style="padding: 15px; border: 1px solid #e3e3e3;border-left: none; vertical-align: top" width="75%">
+                                                            Để xác thực tài khoản, mời quý khách click vào đường dẫn dưới đây:<br/>
+                                                            <a href="<%- params.hostname%>user/verify-<%- user.Id%>.html?token=<%- user.VerifyToken%>" style="display: block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">Xác nhận</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <p><b>BẮT ĐẦU QUẢN LÝ TÀI CHÍNH NGAY TẠI <a href="<%- params.hostname%>">MONEYLOVE.COM</a>!</b></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:0 0 0 0;border:1px solid #e3e3e3;border-top:none;border-bottom:none;background: #fff">
+                                        <tbody>
+                                        <tr>
+                                            <td style="padding:5px 20px 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666666">
+                                                Mọi thắc mắc và góp ý, Quý khách vui lòng liên hệ với chúng tôi qua:
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:5px 20px 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666666">
+                                                Email hỗ trợ:
+                                                <font color="#0388cd"><a href="mailto:support@moneylove.com" target="_blank">support@moneylove.com</a></font>
+                                                hoặc
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:5px 20px 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666666">
+                                                Mọi ý kiến phản hồi về chất lượng chăm sóc khách hàng gọi quản lý Hotline: 01658820821
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:20px 20px 20px 20px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666666">
+                                                Moneylove.com trân trọng cảm ơn và rất hân hạnh được phục vụ Quý khách.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:5px 20px 20px 20px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666666;font-style:italic">
+                                                <b>* Quý khách vui lòng không trả lời email này *</b></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

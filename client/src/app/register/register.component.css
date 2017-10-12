@@ -56,7 +56,6 @@
     margin-top: 70px;
 }
 .error-msg {
-    color: red;
+    color: #ff4e2d;
     text-align: left;
-    margin-left: 31%;
 }

@@ -40,7 +40,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    Satl: {
+    Salt: {
       type: DataTypes.STRING(25),
       allowNull: true
     },

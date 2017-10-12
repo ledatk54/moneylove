@@ -7,45 +7,63 @@
     </ul>
     <form class="register-form" *ngIf="!submitted" [formGroup]="registerForm" (submit) = "onRegisterSubmit()">
 
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{'has-error': (registerForm.controls.registerName.errors && registerForm.controls.registerName.dirty), 'has-success': !registerForm.controls.registerName.errors}">
         <input formControlName="registerName" type="text" placeholder="Full Name*" size="30" class="autofocus-first-field ">
-        <div class="error-msg" *ngIf="registerForm.controls.registerName.errors?.minlength && registerForm.controls.registerName.dirty">
-            This field is requied
+        <div class="error-msg" *ngIf = "registerForm.controls.registerName.errors?.required && registerForm.controls.registerName.dirty">
+            * This field is required
+        </div>
+        <div class="error-msg" *ngIf="(registerForm.controls.registerName.errors?.minlength && registerForm.controls.registerName.dirty) || (registerForm.controls.registerName.errors?.maxlength && registerForm.controls.registerName.dirty)">
+            * This name must have min 6 character
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{'has-error': (registerForm.controls.registerEmail.errors && registerForm.controls.registerEmail.dirty), 'has-success': !registerForm.controls.registerEmail.errors}">
         <input formControlName="registerEmail"  type="email" placeholder="Email*"  size="30" >
-        <div class="error-msg" *ngIf="registerForm.controls.registerEmail.errors.email && registerForm.controls.registerEmail.touched">
-          This field is must be a email
+        <div class="error-msg" *ngIf="registerForm.controls.registerEmail.errors?.required && registerForm.controls.registerEmail.dirty">
+          * This field is must required
         </div>
-        <div class="error-msg" *ngIf="registerForm.controls.registerEmail.errors.required && registerForm.controls.registerEmail.touched">
-          This field is must required
+        <div class="error-msg" *ngIf="registerForm.controls.registerEmail.errors?.email && registerForm.controls.registerEmail.dirty && !registerForm.controls.registerEmail.errors?.required">
+          * This field is must be a valid-email
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{'has-error': (registerForm.controls.registerPhone.errors && registerForm.controls.registerPhone.dirty), 'has-success': !registerForm.controls.registerPhone.errors}">
         <input formControlName="registerPhone" placeholder="Phone*" type="text"  size="30" >
+        <div class="error-msg" *ngIf="registerForm.controls.registerPhone.errors?.required && registerForm.controls.registerPhone.dirty">
+          * This field is must required
+        </div>
+        <div class="error-msg" *ngIf="registerForm.controls.registerPhone.errors?.validatePhone && registerForm.controls.registerPhone.dirty && !registerForm.controls.registerPhone.errors?.required">
+          * This field is must be a valid-phone
+        </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{'has-error': (registerForm.controls.registerPassword.errors && registerForm.controls.registerPassword.dirty), 'has-success': !registerForm.controls.registerPassword.errors}">
         <input formControlName="registerPassword" type="password" placeholder="Password*" size="30" >
+        <div class="error-msg" *ngIf="registerForm.controls.registerPassword.errors?.required && registerForm.controls.registerPassword.dirty">
+          * This field is must required
+        </div>
+        <div class="error-msg" *ngIf="registerForm.controls.registerPassword.errors?.validatePassword && registerForm.controls.registerPassword.dirty && !registerForm.controls.registerPassword.errors?.required">
+          * This field is must be a valid-password
+        </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{'has-error': (registerForm.controls.registerRePassword.errors && registerForm.controls.registerRePassword.dirty) || (registerForm.errors?.matchingPasswords && registerForm.controls.registerRePassword.dirty), 'has-success': !registerForm.controls.registerRePassword.errors && !registerForm.errors?.matchingPasswords}">
         <input formControlName="registerRePassword"  type="password" placeholder="Confirm Password*" size="30" >
+        <div class="error-msg" *ngIf="registerForm.controls.registerRePassword.errors?.required && registerForm.controls.registerRePassword.dirty">
+          * This field is must required
+        </div>
+        <div class="error-msg" *ngIf="registerForm.errors?.matchingPasswords && registerForm.controls.registerRePassword.dirty && !registerForm.controls.registerRePassword.errors?.required">
+          * Password do not match
+        </div>
       </div>
 
       <div class="form-group">
-        <button type="submit" class="btn btn-blue ctaarrow-white focus_on_button"> <!--[disabled]="!registerForm.valid"-->Sign up</button>
+        <button type="submit" class="btn btn-blue ctaarrow-white focus_on_button" [disabled]="!registerForm.valid"> Sign up</button>
       </div>
       <div class="devise_links">
         Have a account?  <a routerLink="/login" class="small">Login</a>
       </div>
     </form>
-    <p>Value: {{ registerForm.value | json}}</p>
-
-    <p>Status : {{ registerForm.status}}</p>
   </div>
 </div>
 

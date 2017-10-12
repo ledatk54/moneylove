@@ -10,22 +10,26 @@ var utility = require('../models/helper/utility');
 router.post("/register", function (req, res) {
     var params = req.body;
     if(!params.registerName || params.registerName.trim() === ''){
-        res.json({success : false , message : "Tên không được để trống"});
+        res.json({success : false , message : "You must provide a Name"});
         return;
     }
     if(!params.registerEmail){
-        res.json({success : false , message : "Email không được để trống"});
+        res.json({success : false , message : "You must provide a Email"});
         return;
     }
-    if(!params.registerPhone || !params.registerRePassword || !params.registerPassword){
-        res.json({success : false , message : "Phone, password không được để trống"});
+    if(!params.registerPhone){
+        res.json({success : false , message : "You must provide a Phone"});
+        return;
+    }
+    if(!params.registerPassword){
+        res.json({success : false , message : "You must provide a Password"});
         return;
     }
     UserService.Register(params).then(function (user) {
         if(user){
-            res.json({success : true , message : "Tạo tài khoản thành công vui lòng vào email để xác nhận", data: user});
+            res.json({success : true , message : "Register success , login to your email to verify", data: user});
         }else {
-            res.json({success : false , message : "Email đã tồn tại"});
+            res.json({success : false , message : "E-mail already exists"});
         }
     });
 });

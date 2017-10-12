@@ -4,6 +4,7 @@
 var bcrypt = require("bcrypt-nodejs");
 var sha1  = require("sha1");
 var models = require("../db");
+var EmailService = require('./EmailService');
 
 module.exports.Register = function (params) {
     var salt = bcrypt.genSaltSync(10);
@@ -25,12 +26,17 @@ module.exports.Register = function (params) {
         }
     ).spread(function (user, created) {
         if(created){
+            EmailService.register(user);
             return user.get({plain: true});
         }else {
             return null;
         }
     });
 };
+
+module.exports.ActiveAccount = function (id) {
+
+}
 
 module.exports.ForgotPassword = function (email) {
     var passwordResetToken = bcrypt.genSaltSync(35);

@@ -92,6 +92,7 @@ a{
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
+    outline: none;
 }
 .ctaarrow-white:after {
     display: inline-block;
@@ -119,4 +120,14 @@ a{
     color: #0099cb;
     font-size: 15px;
     text-decoration: none;
+}
+.form-group {
+    width: 274px;
+    margin: 0 auto 1rem;
+}
+.form-group.has-error input{
+    border-color: red;
+}
+.form-group.has-success input {
+    border-color: #11cc98;
 }

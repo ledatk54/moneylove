@@ -53,6 +53,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER(1),
       allowNull: true,
       defaultValue: '0'
+    },
+    TransactionTime: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     tableName: 'transaction'

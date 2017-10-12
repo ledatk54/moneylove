@@ -4,8 +4,8 @@ module.exports = {
         host: "smtp.elasticemail.com",
         port: 2525,
         auth: {
-            user: "huylx612@gmail.com",
-            pass: "576c37e8-3c86-47a7-8d12-61cdf22aa233"
+            user: "ledat.k54@gmail.com",
+            pass: "e3e2d98e-dd45-4a58-bbe8-947a52a31b70"
         }
     }
 }
