@@ -1,2 +1,4 @@
 # IDEs and editors
 /.idea
+/.scannerwork
+/config/db.js
